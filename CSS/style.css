@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #eaebed;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.center{
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50rem;
+    height: 40rem;
+    background: #f4f4f4;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 30px 0px #00000041;
+}
+
+.center h1{
+    text-align: center;
+    padding: 0 0 2rem 0;
+    border-bottom: 1px solid silver;    
+    color: rgba(29, 26, 26, 0.833);
+}
+
+.center form{
+    padding: 0 6rem;
+    box-sizing: border-box;
+}
+
+form .txt-field{
+    position: relative;
+    border-bottom: 0.2rem solid #adadad;
+    margin: 1.5rem 0;
+
+}
+
+.txt-field input{
+    width: 100%;
+    padding: 0 0.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    border: none;
+    background: none; 
+    outline: none;
+}
+
+.txt-field label{
+    position: absolute;
+    top: 10%;
+    left: 0.2rem;
+    color: #adadad;
+    font-size: 1.1rem;
+    pointer-events: none;
+    transition: .5s;
+
+}
+
+.txt-field span::before{
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: grey;
+    transition: .5s;
+}
+.txt-field input:focus ~ label,
+.txt-field input:valid ~ label{
+    top: -1rem;
+    /* color: rgba(29, 26, 26, 0.833); */
+    color: rgb(185, 156, 156);
+}
+
+.txt-field input:focus ~ span::before
+.txt-field input:valid ~ span::before{
+    width: 100%;
+}
+
+
+.form-btn{
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 12rem;
+    display: block;
+    padding: 0.5em 3em;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: #e63946;
+    border-radius: 2rem;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.form-btn:hover{
+    border: 2px solid #e63946;
+    background-color: #fff;
+    color: #e63946;
+}
